@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/estilos.css?v=1.0.1">
+</head>
+<body class="datos-body d-flex justify-content-center align-items-center" style="height: 100vh;">
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped text-center">
+            <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Valor</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#datosUsuario}}
+                <tr>
+                    <td>{{descripcion}}
+                        {{grupoEdad}}
+                        {{nombre}}
+                        {{pais}}
+                        {{sexo}}</td>
+                    <td>{{valor}}
+                        {{cantidadUsuariosPorGrupoDeEdad}}
+                        {{porcentaje}}
+                        {{cantidadUsuariosPorPais}}
+                        {{cantidadUsuariosPorSexo}}</td>
+                </tr>
+            {{/datosUsuario}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
